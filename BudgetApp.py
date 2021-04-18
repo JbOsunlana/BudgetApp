@@ -4,8 +4,6 @@ class Budget:
         self.balance_clothing = 0
         self.balance_entertainment = 0
 
-    def total_amount(self):
-        return self.balance_food + self.balance_clothing + self.balance_entertainment
 
     #methods for food category
     def deposit_food(self, amount):
@@ -88,3 +86,43 @@ class Budget:
 
 
 budget = Budget()
+
+print('===================================================================================')
+# instances for food category
+print('Your budget for food is:', budget.deposit_food(12000))
+print('you are withdrawing', budget.withdraw_food(3000), 'from your food budget')
+print('The current balance left in your food budget account is:',
+      budget.balance_food_check())
+print('===================================================================================')
+
+# instances for clothing category
+print('Your budget for clothing is:', budget.deposit_clothing(7000))
+print('you are withdrawing', budget.withdraw_clothing(
+    2000), 'from your clothing budget')
+print('The current balance left in your clothing budget account is:',
+      budget.balance_clothing_check())
+print('===================================================================================')
+
+# instances for entertainment category
+print('Your budget for entertainment food is:',
+      budget.deposit_entertainment(3000))
+print('you are withdrawing', budget.withdraw_entertainment(
+    1000), 'from your entertainment budget')
+print('The current balance left in your entertainment budget account is:',
+      budget.balance_entertainment_check())
+      
+# you can create more instances below
+print(budget.transfer_from_clothing_to_food(1700))
+
+
+
+
+
+
+
+
+
+
+
+
+
